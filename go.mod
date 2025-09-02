@@ -1,4 +1,4 @@
-module github.com/zengren707/go-bookstroe
+module github.com/zengren707/go-bookstore
 
 go 1.24.1
 

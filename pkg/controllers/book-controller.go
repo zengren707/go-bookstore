@@ -9,8 +9,6 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/zengren707/go-bookstore/pkg/models"
 	"github.com/zengren707/go-bookstore/pkg/utils"
-	"github.com/zengren707/go-bookstroe/pkg/models"
-	"github.com/zengren707/go-bookstroe/pkg/utils"
 )
 
 var NewBook models.Book
@@ -54,7 +52,7 @@ func DeleteBook(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println("error while parsing")
 	}
-	book, _ := models.DeleteBook(Id)
+	book := models.DeleteBook(Id)
 	res, _ := json.Marshal(book)
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
